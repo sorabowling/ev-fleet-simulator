@@ -2,7 +2,11 @@
 
 **An agent-based model of driving, home connection, battery state of charge, and fleet electricity demand.**
 
-Simulate individual vehicles in five-minute intervals, then aggregate their behavior into a fleet demand profile. Change the archetype mix, driving probabilities, simulation dates, or charging efficiency and inspect both individual sessions and population results.
+Simulate individual vehicles in five-minute intervals, then aggregate their behavior into a fleet demand profile. Change the archetype mix, driving probabilities (propensity to drive on weekdays vs. weekends), simulation dates, or charging efficiency and inspect both individual sessions and population results.
+
+Detailed EV driving and charging data can be difficult to access outside vehicle manufacturers. But understanding when vehicles are driven and charged is essential for estimating electricity demand, anticipating demand peaks, and evaluating charging strategies.
+
+This simulator starts with aggregate driver profiles and generates synthetic driving and home-charging time series. It tracks each vehicle’s battery state of charge and combines their charging loads to explore how fleet demand changes throughout the day.
 
 The model combines stochastic behavior with explicit energy accounting. Each vehicle has a daily travel plan, a home connection schedule, and a battery whose energy is carried forward through time.
 
