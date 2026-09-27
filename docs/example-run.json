@@ -1,0 +1,24 @@
+{
+  "model_version": "home_only_bounded_v1",
+  "package_version": "0.1.0",
+  "config": {
+    "start": "2026-01-05",
+    "days": 7,
+    "number_of_agents": 100,
+    "seed": 42,
+    "timestep_minutes": 5,
+    "timezone": "Europe/London",
+    "charging_efficiency": 0.99,
+    "reserve_soc": 0.1,
+    "average_speed_mph": 30.0,
+    "outbound_distance_share": 0.5
+  },
+  "simulated_agents": 100,
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "all_physical_checks_passed": true,
+  "peak_grid_power_kw": 342.99999999999994,
+  "total_grid_energy_kwh": 8475.586822925736,
+  "total_distance_miles": 30297.349938260315
+}

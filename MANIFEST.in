@@ -1,0 +1,7 @@
+include README.md pyproject.toml .gitignore
+recursive-include src/ev_fleet_sim/data *.csv
+recursive-include tests *.py *.json
+recursive-include docs *.md *.png *.json
+recursive-include examples *.py
+recursive-include notebooks *.ipynb
+recursive-include .github *.yml

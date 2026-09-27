@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ev-fleet-simulator"
+version = "0.1.0"
+description = "Agent-based EV travel, home charging, and fleet demand simulation"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Sora Bowling"}]
+dependencies = ["numpy>=1.26,<3", "pandas>=2.2,<4", "tzdata>=2024.1"]
+
+[project.optional-dependencies]
+plots = ["plotly>=5.24,<8"]
+notebook = ["plotly>=5.24,<8", "ipywidgets>=8.1,<9", "jupyterlab>=4,<5", "nbformat>=5.10,<6"]
+dev = ["pytest>=8,<10", "ruff>=0.11,<1", "build>=1,<2", "matplotlib>=3.8,<4"]
+
+[project.scripts]
+ev-fleet = "ev_fleet_sim.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+ev_fleet_sim = ["data/*.csv"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+

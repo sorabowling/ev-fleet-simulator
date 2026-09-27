@@ -1,0 +1,7 @@
+archetype_id,archetype,population_percent,miles_per_year,battery_capacity_kwh,driving_efficiency_mi_per_kwh,plugin_frequency_per_day,charger_power_kw,nominal_plugin_time,nominal_plugout_time,target_soc,reference_kwh_per_year,reference_kwh_per_plugin,reference_plugin_soc,reference_soc_requirement,reference_charging_duration_hours,population_share,charging_policy,departure_anchor,return_anchor
+1,Archetype A,40,9435,60.0,3.5,1.0,7,18:00,07:00,0.8,2696,7,0.68,0.12,1.0,0.4,immediate,07:00,18:00
+2,Archetype B,30,28105,72.5,3.5,1.0,7,18:00,07:00,0.8,8030,22,0.52,0.28,2.5,0.3,immediate,07:00,18:00
+3,Archetype C,10,9435,60.0,3.5,0.2,7,18:00,07:00,0.8,2696,37,0.18,0.62,5.0,0.1,immediate,07:00,18:00
+4,Archetype D,10,5700,60.0,3.5,1.0,7,18:00,07:00,0.8,1629,4,0.73,0.07,1.0,0.1,immediate,07:00,18:00
+5,Archetype E,9,9435,60.0,3.5,1.0,7,22:00,09:00,0.8,2696,7,0.68,0.12,1.0,0.09,scheduled,09:00,18:00
+6,Archetype F,1,9435,60.0,3.5,1.0,7,00:00,23:59,0.8,2696,7,0.68,0.12,1.0,0.01,immediate,07:00,18:00
