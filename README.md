@@ -71,13 +71,6 @@ In JupyterLab, choose **Run → Run All Cells** to initialize the notebook and i
 
 The default is 100 vehicles to keep exploration responsive. Use `--agents 1000` for a larger fleet. Runtime and memory grow with the number of vehicles and intervals, and the current implementation holds the complete timeline in memory.
 
-### Installation troubleshooting
-
-- **Python is missing or older than 3.10:** install a supported version from [python.org](https://www.python.org/downloads/). On macOS/Linux with several versions installed, use the appropriate command when creating the environment, for example `python3.13 -m venv .venv`. An environment created with an older Python must be recreated with the newer interpreter.
-- **Editable installation reports a missing `setup.py` or `setup.cfg`:** this project uses `pyproject.toml`. Older pip versions do not support this installation method. With the environment active, run `python -m pip install --upgrade pip`, then retry the installation. An upgrade is unnecessary when installation already succeeds.
-- **PowerShell blocks activation:** open Command Prompt in the project folder and activate with `.venv\Scripts\activate.bat`, then run the shared installation commands above.
-- **`ev-fleet`, `jupyter`, or a development tool is not found:** activate the environment in the current terminal and confirm that the relevant installation command completed successfully. The notebook and development tools require their respective extras.
-
 ## What is modeled
 
 | Layer | Inputs and decisions | Outputs |
@@ -271,6 +264,13 @@ Regression tests use a fixed seven-day scenario with one vehicle per archetype a
 Tests also exercise energy conservation, continuity, no simultaneous driving and charging, charger limits, session boundaries, policy independence from labels, stable per-agent random streams, infeasible settings, and both daylight-saving transitions. GitHub Actions is configured to run lint, formatting, tests, package build, and a CLI smoke run.
 
 See [validation results](docs/verification.md) for test coverage and the example run.
+
+### Installation troubleshooting
+
+- **Python is missing or older than 3.10:** install a supported version from [python.org](https://www.python.org/downloads/). On macOS/Linux with several versions installed, use the appropriate command when creating the environment, for example `python3.13 -m venv .venv`. An environment created with an older Python must be recreated with the newer interpreter.
+- **Editable installation reports a missing `setup.py` or `setup.cfg`:** this project uses `pyproject.toml`. Older pip versions do not support this installation method. With the environment active, run `python -m pip install --upgrade pip`, then retry the installation. An upgrade is unnecessary when installation already succeeds.
+- **PowerShell blocks activation:** open Command Prompt in the project folder and activate with `.venv\Scripts\activate.bat`, then run the shared installation commands above.
+- **`ev-fleet`, `jupyter`, or a development tool is not found:** activate the environment in the current terminal and confirm that the relevant installation command completed successfully. The notebook and development tools require their respective extras.
 
 ## Scope and next steps
 
