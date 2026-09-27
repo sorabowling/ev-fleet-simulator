@@ -181,7 +181,9 @@ The denominator is the **expected** number of driving days. Dividing by the real
 
 The maximum daily distance is $R = C(1-r)e$, where $C$ is battery capacity, $r$ is the reserve fraction, and $e$ is miles/kWh. On an active day:
 
-$$X = R Z,\quad Z \sim \operatorname{Beta}(\alpha,\beta),\quad \alpha=5,\quad \beta=\alpha(R/\mu-1)$$
+$$
+X = R Z,\quad Z \sim \mathrm{Beta}(\alpha,\beta),\quad \alpha=5,\quad \beta=\alpha(R/\mu-1)
+$$
 
 This keeps distance within the home-only range while preserving its specified mean. Positive mileage requires $0<\mu<R$. Impossible settings raise an error. Zero annual mileage produces no driving sessions.
 
